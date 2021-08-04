@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/form.css">
+     <link rel="stylesheet" href="css/loader.css">
+    <script src="js/loader.js"></script>
+<style>
+    
+body
+{
+  background: url('img/back2.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+}
+
+
+</style>
+</head>
+
+  
+
+  <body>
+      <br>
+    <h1 style="text-align: center; color: whitesmoke;" >Help us Raise Hope</h1><br>
+    <div class="form-modal">
+    
+    <div class="form-toggle">
+        <button id="login-toggle" onclick="toggleLogin()">Donor</button>
+        <button id="signup-toggle" onclick="toggleSignup()">Volunteer</button>
+    </div>
+
+    <div id="donor-form">
+      <h2 style="text-align: center;">Volunteers Login</h2>
+        <form onsubmit="return validateVlogin()" action="LoginAdmin" method="post">
+            <input type="email" autofocus name="vemail" required placeholder="Enter email or username"/>
+            <input type="password"  name="pass" required placeholder="Enter password"/>
+            <button onclick="myFunction()" type="submit" class="btn login">login</button>
+            <p><a href="Forgot.html">Forgot Password?</a></p>
+            <p><a href="signup1.html">Don't Have Account ? SIGN-UP NOW</a> </p>
+            
+            <hr/>
+            <h3 style="text-align: center; font-weight: bold ;"><a href="index.html"> Home</a></h3>
+        </form>
+    </div>
+        <!--DONOR FORM-->
+
+    <div id="login-form">
+        <form onsubmit="return validateDlogin()" action="LoginDonor" >
+          <h2 style="text-align: center;">Donor Login</h2>
+            <input type="email"  required placeholder="Enter your email" name="demail"/>            
+            <button onclick="myFunction()" type="submit" class="btn signup">Login</button>
+            <p><a href="signup1.html">Don't Have Account? SIGN-UP NOW</a></p>
+            <hr/>
+            <h3 style="text-align: center; font-weight: bold ;"><a href="index.html" > Home</a></h3>
+        </form>
+    </div>
+
+</div>
+
+</body>
+
+<script>
+  function toggleSignup(){
+    document.getElementById("login-toggle").style.backgroundColor="#fff";
+     document.getElementById("login-toggle").style.color="#222";
+     document.getElementById("signup-toggle").style.backgroundColor="#eeee58";
+     document.getElementById("signup-toggle").style.color="272727";
+     document.getElementById("login-form").style.display="none";
+     document.getElementById("donor-form").style.display="block";
+ }
+ 
+ function toggleLogin(){
+     document.getElementById("login-toggle").style.backgroundColor="#eeee58";
+     document.getElementById("login-toggle").style.color="#272727";
+     document.getElementById("signup-toggle").style.backgroundColor="#fff";
+     document.getElementById("signup-toggle").style.color="#222";
+     document.getElementById("donor-form").style.display="none";
+     document.getElementById("login-form").style.display="block";
+ }
+ 
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rope of Hope</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <script src="js/loader.js"></script>
+    <style>
+        body
+        {
+            background: url('img/16.jpg');
+            -webkit-background-size: auto;
+            -moz-background-size: auto;
+            -o-background-size: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="loader" style="display:none;">
+    </div>
+      
+    <div style="opacity:75%; width:30%;" class="form-modal">
+    <br>
+        <h1 style="text-align: center; font-size:large; font-family: Arial, Helvetica, sans-serif;">
+            Enter Your Email For Verification
+        </h1>
+        <form  action="Form1.jsp" method="post" name="myForm">
+        <input type="email" required name="Email" style="font-family: Arial;" autofocus placeholder="Enter Your Email">
+        <button onclick="myLoader()" style="margin-left:150px"  type="submit" class="btn login" name="e">Verify</button>       
+        </form>
+        <hr>
+        <h3 style=" text-align: center; padding-bottom: 3%"><a href="index.html"><u> Back to Home </u></a></h3>
+    </div>
+  </body>
+ 
+
+</html>
